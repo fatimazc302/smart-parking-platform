@@ -1,0 +1,6 @@
+1.) Gemini pro was used in accordance with the UH rules, I didn't upload any course material into my AI search engine.
+2.) Since I had initially wrote out all of the deliverables in a Word document, when I tried to condense everything and move things
+such as my Use Cases over to Github, I used Gemini to reformat my text and make everything one cohesive document and make the format 
+easy to read and sectioned.
+3.) "Format this docx into a copy-pastable document that will go in my README.md. Make sure its properly sectioned like it is in the document, dont use too many stars and pounds."
+4.) The AI kept on giving me lots of stars and I ended up removing lots of them, Im not sure if it messed with the formatting because initially my text was not separated it was one big paragraph instead of numbered points on each line.
