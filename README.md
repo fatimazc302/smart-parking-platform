@@ -389,3 +389,139 @@ Date:                September 10, 2026
 5. Administrator archives audit records to meet compliance storage guidelines.
 
 *** THIS IS THE END OF MY HOMEWORK 1 PORTION ***
+
+## 5. Work Breakdown Structure (WBS)
+
+Before I could put together a schedule, I needed to break the project down 
+into smaller, more manageable pieces. Below is my Work Breakdown Structure, 
+broken down three levels deep (major component -> sub-component -> 
+individual task), based on the scope already defined in the SRS above.
+
+**1. Project Management**
+   1.1 Kickoff & Planning
+       1.1.1 Vision & Scope Document
+       1.1.2 Software Requirements Specification
+   1.2 Documentation & Reporting
+       1.2.1 Weekly GitHub Update
+       1.2.2 Weekly Stakeholder Video
+
+**2. Authentication & Access Control**
+   2.1 Driver Login
+       2.1.1 Email/Password Registration
+       2.1.2 OAuth 2.0 Login
+       2.1.3 SMS Verification
+   2.2 Operator Login
+       2.2.1 Employee Login
+       2.2.2 Two-Factor Authentication
+   2.3 Role-Based Permissions
+       2.3.1 Driver Role
+       2.3.2 Operator Role
+       2.3.3 Admin Role
+
+**3. Driver Mobile App (iOS/Android)**
+   3.1 Map & Search
+       3.1.1 Interactive Map
+       3.1.2 Real-Time Spot Availability
+       3.1.3 Filters/Rate Display
+   3.2 Reservation & Checkout
+       3.2.1 15-Minute Hold Logic
+       3.2.2 Payment Method Picker
+       3.2.3 Booking Confirmation Screen
+   3.3 Digital Access Pass
+       3.3.1 QR Code Generation
+       3.3.2 License Plate Linking
+   3.4 In-Garage Navigation
+       3.4.1 Bluetooth Beacon Positioning
+       3.4.2 Turn-by-Turn Routing
+   3.5 Session Management
+       3.5.1 Expiration Push Notifications
+       3.5.2 Extend Session Flow
+       3.5.3 Cancel/Refund Flow
+   3.6 Booking History
+       3.6.1 Receipt/Tax Export
+
+**4. Operator Web Portal**
+   4.1 Dashboard
+       4.1.1 Facility Overview
+       4.1.2 Bay Management (block bays for maintenance)
+   4.2 Dynamic Pricing
+       4.2.1 Surge Pricing Rules
+       4.2.2 Rate Scheduling
+   4.3 Reports & Analytics
+       4.3.1 Revenue Export (CSV/PDF)
+       4.3.2 Occupancy Dashboard
+   4.4 Security
+       4.4.1 Access Logs
+       4.4.2 API Monitoring
+
+**5. Backend & Cloud API**
+   5.1 Core Services
+       5.1.1 Reservation Service
+       5.1.2 User/Account Service
+   5.2 Live Telemetry
+       5.2.1 Sensor/Gate Event Ingestion
+       5.2.2 Live Occupancy Updates
+   5.3 Database/Infrastructure
+       5.3.1 Schema Design
+       5.3.2 Scaling & Deployment
+   5.4 Overstay Detection
+       5.4.1 Monitoring Job
+       5.4.2 Alert Dispatch
+
+**6. Payments**
+   6.1 Payment Gateway
+       6.1.1 Credit/Debit Cards
+       6.1.2 Apple Pay / Google Pay
+   6.2 Compliance
+       6.2.1 PCI-DSS Tokenization
+       6.2.2 Encryption (TLS 1.3 / AES-256)
+
+**7. QA & Testing**
+   7.1 Automated Testing
+       7.1.1 Unit Tests
+       7.1.2 Integration Tests
+   7.2 Load Testing
+       7.2.1 Concurrency Test (20k users)
+       7.2.2 Latency Benchmarks
+   7.3 User Acceptance Testing
+       7.3.1 Driver Flow Testing
+       7.3.2 Operator Flow Testing
+
+
+## 6. Project Schedule & Timeline
+
+Once the WBS was complete, I used it along with rough effort estimates to 
+draft a schedule. Most estimates are based on comparable features already 
+implemented in similar applications, since building precise estimates for 
+every task wasn't practical at this stage. Task dependencies are mostly 
+finish-to-start: the mobile app's booking flow won't start until the backend 
+reservation service exists, and testing on a feature doesn't begin until 
+that feature is built.
+
+**Draft Timeline**
+Week 1-2:   Project kickoff, requirements, Vision & Scope (done)
+Week 3:     WBS & schedule baseline (this deliverable)
+Week 4-6:   Core backend, database schema, and authentication
+Week 6-8:   Real-time telemetry and live occupancy tracking
+Week 7-9:   Mobile app - map, search, reservations, checkout
+Week 8-10:  Web admin portal - dashboard, bay management, dynamic pricing
+Week 9-11:  Payment gateway integration and PCI-DSS compliance
+Week 10-12: Mobile app - QR passes, in-garage navigation, session management
+Week 11-13: Reporting, analytics, and security/audit console
+Week 13-15: QA - automated testing, load testing, user acceptance testing
+Week 16:    Final delivery / Release 1.0
+
+**Milestones**
+M1 - Requirements Signed Off ........... Week 2
+M2 - WBS + Schedule Baseline (this HW) .. Week 3
+M3 - Core Backend/Auth Complete ......... Week 6
+M4 - Mobile App Alpha ................... Week 9
+M5 - Web Portal Alpha ................... Week 10
+M6 - Payments + Navigation Complete ..... Week 11
+M7 - Feature-Complete Beta .............. Week 13
+M8 - QA/Load/UAT Complete ............... Week 15
+M9 - Final Delivery (Release 1.0) ....... Week 16
+
+--- Gantt chart will be on separate document----
+
+* THIS IS THE END OF MY HOMEWORK 2 *
