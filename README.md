@@ -522,4 +522,4 @@ Milestones serve as zero-duration control gates measuring critical delivery thre
 | **Weeks 13–15** | Comprehensive QA: Load, Security, and UAT | 7.1, 7.2, 7.3 | M7 Beta Feature Freeze (FS) |
 | **Week 16** | Production Deployment & Release 1.0 | Release Delivery | M8 Verification Approval (FS) |
 
-*** THIS IS THE END OF MY HOMEWORK 2 POTION ***
+*** THIS IS THE END OF MY HOMEWORK 2 PORTION ***
