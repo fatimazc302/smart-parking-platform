@@ -390,138 +390,136 @@ Date:                September 10, 2026
 
 *** THIS IS THE END OF MY HOMEWORK 1 PORTION ***
 
-## 5. Work Breakdown Structure (WBS)
+# Section 5: Work Breakdown Structure (WBS)
 
-Before I could put together a schedule, I needed to break the project down 
-into smaller, more manageable pieces. Below is my Work Breakdown Structure, 
-broken down three levels deep (major component -> sub-component -> 
-individual task), based on the scope already defined in the SRS above.
+Before constructing the project schedule, the smart parking platform was decomposed into smaller, manageable components following a 3-level hierarchical structure (**Subsystem → Module → Work Package/Feature**). The breakdown directly reflects the operational boundaries and user personas established in the Software Requirements Specification (SRS).
 
-**1. Project Management**
-   1.1 Kickoff & Planning
-       1.1.1 Vision & Scope Document
-       1.1.2 Software Requirements Specification
-   1.2 Documentation & Reporting
-       1.2.1 Weekly GitHub Update
-       1.2.2 Weekly Stakeholder Video
+* **1.0 Project Management**
+  * **1.1 Kickoff & Planning**
+    * 1.1.1 Vision & Scope Document
+    * 1.1.2 Software Requirements Specification (SRS)
+  * **1.2 Governance & Tracking**
+    * 1.2.1 Weekly GitHub Sprint Updates
+    * 1.2.2 Stakeholder Progress Briefings & Demos
 
-**2. Authentication & Access Control**
-   2.1 Driver Login
-       2.1.1 Email/Password Registration
-       2.1.2 OAuth 2.0 Login
-       2.1.3 SMS Verification
-   2.2 Operator Login
-       2.2.1 Employee Login
-       2.2.2 Two-Factor Authentication
-   2.3 Role-Based Permissions
-       2.3.1 Driver Role
-       2.3.2 Operator Role
-       2.3.3 Admin Role
+* **2.0 Authentication & Access Control**
+  * **2.1 Driver Identity Services**
+    * 2.1.1 Email/Password Registration & Credential Store
+    * 2.1.2 OAuth 2.0 Social Federation
+    * 2.1.3 SMS/MFA Verification Flow
+  * **2.2 Operator Identity Services**
+    * 2.2.1 Enterprise Directory & Staff Provisioning
+    * 2.2.2 Two-Factor Authentication (TOTP / Hardware Token)
+  * **2.3 Role-Based Access Control (RBAC)**
+    * 2.3.1 Driver Profile & Vehicle Asset Permissions
+    * 2.3.2 Garage Operator Attendant Permissions
+    * 2.3.3 System Administrator Policy Engine
 
-**3. Driver Mobile App (iOS/Android)**
-   3.1 Map & Search
-       3.1.1 Interactive Map
-       3.1.2 Real-Time Spot Availability
-       3.1.3 Filters/Rate Display
-   3.2 Reservation & Checkout
-       3.2.1 15-Minute Hold Logic
-       3.2.2 Payment Method Picker
-       3.2.3 Booking Confirmation Screen
-   3.3 Digital Access Pass
-       3.3.1 QR Code Generation
-       3.3.2 License Plate Linking
-   3.4 In-Garage Navigation
-       3.4.1 Bluetooth Beacon Positioning
-       3.4.2 Turn-by-Turn Routing
-   3.5 Session Management
-       3.5.1 Expiration Push Notifications
-       3.5.2 Extend Session Flow
-       3.5.3 Cancel/Refund Flow
-   3.6 Booking History
-       3.6.1 Receipt/Tax Export
+* **3.0 Driver Mobile Application (iOS / Android)**
+  * **3.1 Discovery & Search Module**
+    * 3.1.1 Interactive Geospatial Map Engine
+    * 3.1.2 Real-Time Bay Availability Feed
+    * 3.1.3 Multi-Criteria Filtering & Fee Calculator
+  * **3.2 Reservation & Checkout**
+    * 3.2.1 15-Minute Dynamic Slot Reservation Lock
+    * 3.2.2 Payment Method Selector
+    * 3.2.3 Digital Booking Confirmation & Pass Issuance
+  * **3.3 Digital Access Passes**
+    * 3.3.1 Dynamic Secure QR Code Generator
+    * 3.3.2 Automated License Plate Recognition (ALPR) Linking
+  * **3.4 In-Facility Guidance**
+    * 3.4.1 BLE Beacon Triangulation & Handshake
+    * 3.4.2 Turn-by-Turn Indoor Bay Routing
+  * **3.5 Active Session Lifecycle**
+    * 3.5.1 Expiration Warning Push Notification Service
+    * 3.5.2 Overstay Grace Period & Self-Extension Module
+    * 3.5.3 Early Check-Out & Prorated Refund Pipeline
+  * **3.6 Driver History & Expense Export**
+    * 3.6.1 Historical Session Invoicing & PDF/CSV Export Engine
 
-**4. Operator Web Portal**
-   4.1 Dashboard
-       4.1.1 Facility Overview
-       4.1.2 Bay Management (block bays for maintenance)
-   4.2 Dynamic Pricing
-       4.2.1 Surge Pricing Rules
-       4.2.2 Rate Scheduling
-   4.3 Reports & Analytics
-       4.3.1 Revenue Export (CSV/PDF)
-       4.3.2 Occupancy Dashboard
-   4.4 Security
-       4.4.1 Access Logs
-       4.4.2 API Monitoring
+* **4.0 Operator Web Portal**
+  * **4.1 Facility Operations Dashboard**
+    * 4.1.1 Multi-Facility Real-Time Status View
+    * 4.1.2 Bay Maintenance Locking & Manual Override
+  * **4.2 Dynamic Pricing & Tariff Engine**
+    * 4.2.1 Peak / Event-Based Surge Pricing Algorithms
+    * 4.2.2 Tiered Rate Scheduling by Time & Vehicle Class
+  * **4.3 Telemetry & Analytics**
+    * 4.3.1 Financial Ledger & Revenue Export Engine
+    * 4.3.2 Occupancy Heatmaps & Historical Trend Analysis
+  * **4.4 Administration & Audit**
+    * 4.4.1 Centralized Access Audit Logging
+    * 4.4.2 Ingestion Gateway & Health Monitoring Dashboards
 
-**5. Backend & Cloud API**
-   5.1 Core Services
-       5.1.1 Reservation Service
-       5.1.2 User/Account Service
-   5.2 Live Telemetry
-       5.2.1 Sensor/Gate Event Ingestion
-       5.2.2 Live Occupancy Updates
-   5.3 Database/Infrastructure
-       5.3.1 Schema Design
-       5.3.2 Scaling & Deployment
-   5.4 Overstay Detection
-       5.4.1 Monitoring Job
-       5.4.2 Alert Dispatch
+* **5.0 Cloud Backend & Data Pipelines**
+  * **5.1 Transactional Core Services**
+    * 5.1.1 Distributed Reservation State Machine
+    * 5.1.2 Profile & Account Microservice
+  * **5.2 Telemetry Ingestion Layer**
+    * 5.2.1 IoT Sensor & Barrier Gate Event Stream Processing
+    * 5.2.2 WebSocket Broadcaster for Live Occupancy Status
+  * **5.3 Data Persistence & Infrastructure**
+    * 5.3.1 Relational Schema Design & Migration Scripts
+    * 5.3.2 Containerized Orchestration & Auto-Scaling Rules
+  * **5.4 Enforcement & Violation Detection**
+    * 5.4.1 Scheduled Overstay & Unpaid Bay Auditing Jobs
+    * 5.4.2 Enforcement Dispatch & Tow Notification Alerts
 
-**6. Payments**
-   6.1 Payment Gateway
-       6.1.1 Credit/Debit Cards
-       6.1.2 Apple Pay / Google Pay
-   6.2 Compliance
-       6.2.1 PCI-DSS Tokenization
-       6.2.2 Encryption (TLS 1.3 / AES-256)
+* **6.0 Payments & Regulatory Compliance**
+  * **6.1 Payment Gateway Processing**
+    * 6.1.1 Credit / Debit Processing Engine
+    * 6.1.2 Mobile Wallet Handshake (Apple Pay, Google Pay)
+  * **6.2 Security & Financial Governance**
+    * 6.2.1 PCI-DSS Vault Tokenization
+    * 6.2.2 At-Rest & In-Flight Cryptographic Enforcement (TLS 1.3 / AES-256)
 
-**7. QA & Testing**
-   7.1 Automated Testing
-       7.1.1 Unit Tests
-       7.1.2 Integration Tests
-   7.2 Load Testing
-       7.2.1 Concurrency Test (20k users)
-       7.2.2 Latency Benchmarks
-   7.3 User Acceptance Testing
-       7.3.1 Driver Flow Testing
-       7.3.2 Operator Flow Testing
+* **7.0 Quality Assurance & Reliability Verification**
+  * **7.1 Automated Testing**
+    * 7.1.1 Unit Test Suites (Services, Controllers, Utilities)
+    * 7.1.2 End-to-End API Integration Pipelines
+  * **7.2 Scalability & Performance Benchmarks**
+    * 7.2.1 Peak Load Simulation (20,000 Concurrent Users)
+    * 7.2.2 Database Query Optimization & Latency Benchmarks
+  * **7.3 User Acceptance Testing (UAT)**
+    * 7.3.1 Driver Mobile Flow Validation
+    * 7.3.2 Garage Operator Operational Drill Testing
 
+---
 
-## 6. Project Schedule & Timeline
+# Section 6: Project Schedule & Timeline
 
-Once the WBS was complete, I used it along with rough effort estimates to 
-draft a schedule. Most estimates are based on comparable features already 
-implemented in similar applications, since building precise estimates for 
-every task wasn't practical at this stage. Task dependencies are mostly 
-finish-to-start: the mobile app's booking flow won't start until the backend 
-reservation service exists, and testing on a feature doesn't begin until 
-that feature is built.
+Effort estimations were derived through **analogy-based sizing** from benchmark microservices and comparable transit systems, balancing implementation complexity against delivery targets. Scheduling dependencies predominantly follow a **Finish-to-Start (FS)** sequence: the client interface layers depend on the foundational core schema, the booking engine requires payment gateway integration, and verification testing proceeds only once functional features reach deployment readiness.
 
-**Draft Timeline**
-Week 1-2:   Project kickoff, requirements, Vision & Scope (done)
-Week 3:     WBS & schedule baseline (this deliverable)
-Week 4-6:   Core backend, database schema, and authentication
-Week 6-8:   Real-time telemetry and live occupancy tracking
-Week 7-9:   Mobile app - map, search, reservations, checkout
-Week 8-10:  Web admin portal - dashboard, bay management, dynamic pricing
-Week 9-11:  Payment gateway integration and PCI-DSS compliance
-Week 10-12: Mobile app - QR passes, in-garage navigation, session management
-Week 11-13: Reporting, analytics, and security/audit console
-Week 13-15: QA - automated testing, load testing, user acceptance testing
-Week 16:    Final delivery / Release 1.0
+### Milestone Definitions
 
-**Milestones**
-M1 - Requirements Signed Off ........... Week 2
-M2 - WBS + Schedule Baseline (this HW) .. Week 3
-M3 - Core Backend/Auth Complete ......... Week 6
-M4 - Mobile App Alpha ................... Week 9
-M5 - Web Portal Alpha ................... Week 10
-M6 - Payments + Navigation Complete ..... Week 11
-M7 - Feature-Complete Beta .............. Week 13
-M8 - QA/Load/UAT Complete ............... Week 15
-M9 - Final Delivery (Release 1.0) ....... Week 16
+Milestones serve as zero-duration control gates measuring critical delivery thresholds across the project lifecycle.
 
---- Gantt chart will be on separate document----
+| Milestone | Description | Target Date | Criteria for Completion |
+| :--- | :--- | :--- | :--- |
+| **M1** | Requirements Finalized | Week 2 | Vision & Scope Document and SRS approved |
+| **M2** | Schedule & WBS Baseline | Week 3 | WBS, activity estimates, and dependency plan completed |
+| **M3** | Core Services & Auth Engine | Week 6 | Schemas deployed, RBAC active, Auth endpoints passing tests |
+| **M4** | Driver Mobile Alpha | Week 9 | Live map discovery, spot hold, and local checkout functioning |
+| **M5** | Operator Web Portal Alpha | Week 10 | Facility dashboard, space overriding, and surge toggles active |
+| **M6** | Integrated Payments & Navigation | Week 11 | Gateway processing live; BLE positioning active |
+| **M7** | System Beta Release | Week 13 | Feature-complete across driver, operator, and analytics layers |
+| **M8** | Verification Sign-Off | Week 15 | Stress testing, security audit, and UAT validated |
+| **M9** | Production Release (1.0) | Week 16 | Deployment to cloud production environment |
 
-* THIS IS THE END OF MY HOMEWORK 2 *
+### Sprint Work Schedule
+
+| Sprint Window | Primary Activity | WBS Focus Areas | Major Predecessor (Dependency) |
+| :--- | :--- | :--- | :--- |
+| **Weeks 1–2** | Project Initiation & Requirements | 1.1, 1.2 | Project Kickoff (FS) |
+| **Week 3** | WBS, Architecture & Estimation Baseline | 1.1, 1.2 | M1 (FS) |
+| **Weeks 4–6** | Core Backend, DB Schemas, & Identity Services | 2.1, 2.2, 2.3, 5.1, 5.3 | M2 (FS) |
+| **Weeks 6–8** | Live Telemetry & Ingestion Pipelines | 5.2, 5.4 | 5.3 Database Provisioning (FS) |
+| **Weeks 7–9** | Driver Mobile: Map Discovery & Reservation | 3.1, 3.2 | 5.1 Core Services (FS) |
+| **Weeks 8–10** | Operator Portal: Bay Admin & Dynamic Pricing | 4.1, 4.2 | 2.3 RBAC, 5.1 Services (FS) |
+| **Weeks 9–11** | Payment Gateway Integration & Hardening | 6.1, 6.2 | 3.2 Reservation Checkout (FS) |
+| **Weeks 10–12** | Mobile Features: BLE Navigation & Pass Passes | 3.3, 3.4, 3.5 | M4 Driver Mobile Alpha (FS) |
+| **Weeks 11–13** | Reporting, Analytics & Security Audit Console | 4.3, 4.4, 3.6 | 5.2 Ingestion, 6.1 Payments (FS) |
+| **Weeks 13–15** | Comprehensive QA: Load, Security, and UAT | 7.1, 7.2, 7.3 | M7 Beta Feature Freeze (FS) |
+| **Week 16** | Production Deployment & Release 1.0 | Release Delivery | M8 Verification Approval (FS) |
+
+*** THIS IS THE END OF MY HOMEWORK 2 POTION ***
