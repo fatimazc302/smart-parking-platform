@@ -4,3 +4,6 @@ such as my Use Cases over to Github, I used Gemini to reformat my text and make 
 easy to read and sectioned.
 3.) "Format this docx into a copy-pastable document that will go in my README.md. Make sure its properly sectioned like it is in the document, dont use too many stars and pounds."
 4.) The AI kept on giving me lots of stars and I ended up removing lots of them, Im not sure if it messed with the formatting because initially my text was not separated it was one big paragraph instead of numbered points on each line.
+
+
+1.) Gemini Pro was used again to help me troubleshoot issues with my Gantt chart in excel, and also to fix the formatting issues that I kept running into for the readme.md file , I asked gemini to "make my formatting consistent with the rest of my document" because I prefer to do my work in a word doc and then move it to the readME file.
