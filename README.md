@@ -523,3 +523,24 @@ Milestones serve as zero-duration control gates measuring critical delivery thre
 | **Week 16** | Production Deployment & Release 1.0 | Release Delivery | M8 Verification Approval (FS) |
 
 *** THIS IS THE END OF MY HOMEWORK 2 PORTION ***
+
+
+Adding Product Backlog and Sprint 1 Plan (Homework 3).
+
+
+## 7. Product Backlog & Sprint Planning
+
+I organized the backlog around the four areas of the app that need to exist before a driver or operator can actually use it: getting into the system, the screens each user touches, the services running behind those screens, and the reporting operators and admins need to make decisions. Everything is tracked as a Trello board, with one list per category plus a Sprint 1 list pulling in the items I'm committing to first.
+
+**7.1 Backlog Categories**
+
+- **Login** (7 items) — registration, OAuth, SMS verification, operator credentials, two-factor auth, password reset, and session expiration.
+- **UI, Operator & User** (17 items) — every driver-facing screen (map, reservation, QR pass, navigation, booking history) and every operator-facing screen (occupancy dashboard, bay management, pricing config, reports, audit log, staff accounts).
+- **Backend, Operator & User** (15 items) — the services behind those screens: reservation and payment processing, QR generation, telemetry ingestion, pricing engine, reporting aggregation, overstay monitoring, audit logging, and the database/infrastructure layer.
+- **Reporting, Operator & User** (11 items) — driver-facing spend summaries and receipts, and operator/admin-facing revenue, occupancy, and audit reports.
+
+**7.2 Sprint 1 Backlog**
+
+For the first sprint I pulled the items that unblock everything else: account creation and login for both drivers and operators, the account/profile service and database schema those logins depend on, and the two flagship screens (driver map, operator dashboard) that give both user types something to actually look at once they're in. Nothing in Sprint 1 depends on a feature outside the sprint, so it can be built and demoed on its own.
+
+
