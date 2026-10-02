@@ -543,4 +543,74 @@ I organized the backlog around the four areas of the app that need to exist befo
 
 For the first sprint I pulled the items that unblock everything else: account creation and login for both drivers and operators, the account/profile service and database schema those logins depend on, and the two flagship screens (driver map, operator dashboard) that give both user types something to actually look at once they're in. Nothing in Sprint 1 depends on a feature outside the sprint, so it can be built and demoed on its own.
 
+## Document Control
 
+| Field | Details |
+| :--- | :--- |
+| **Document Version** | 4.0 |
+| **Date** | October 1, 2026 |
+| **Assignment** | Homework 4 — Risk Management & Communication Plan |
+| **Change Summary** | Added Section 8: Risk Management and Communication Plan per Homework 4 requirements. |
+
+---
+
+## Section 8: Risk Management & Communication Plan (Homework 4)
+
+To protect delivery timelines, platform reliability, and team execution, the project incorporates proactive risk analysis alongside a structured stakeholder communication framework. Identified risks are evaluated across four primary domains—Technical, Schedule, Financial, and People—and actively tracked through a living Risk Register.
+
+---
+
+### 8.1 Risk Identification
+
+* **Technical:** Unreliable telemetry from magnetic bay sensors or physical barrier gate hardware, mapping and geospatial routing API downtime, payment gateway integration failures across card schemes and mobile wallets, QR access pass spoofing or replay vulnerabilities, and database schema degradation under peak concurrent query loads.
+* **Schedule:** Core backend delays cascading into dependent client interfaces, third-party API configurations exceeding original estimates, compressed QA/UAT verification windows caused by upstream slips, and out-of-scope stakeholder requests introduced mid-sprint.
+* **Financial:** Hardware sensor procurement and gateway installation overrunning budgeted thresholds, third-party interchange/processing fees exceeding initial projections, unoptimized cloud infrastructure scaling expenses, and city regulatory/permitting delays introducing unexpected compliance fines or delivery deferrals.
+* **People:** Team member attrition or emergency unavailability mid-lifecycle, technical competency gaps regarding secure payment flows and cloud infrastructure, cross-stream misalignment between mobile and operator teams, and single points of failure (SPOFs) on mission-critical subsystems.
+
+---
+
+### 8.2 Risk Register
+
+The Risk Register serves as an active control ledger to evaluate, assign, and treat vulnerabilities throughout the lifecycle.
+
+| ID | Category | Description | Probability | Impact | Owner | Response Strategy | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **R1** | Technical | Magnetic sensor / gate telemetry unreliable | Medium | High | Backend Lead | **Mitigate** — add retry logic, fallback polling | Open |
+| **R2** | Technical | Mapping / geolocation API downtime | Low | Medium | Mobile Lead | **Transfer** — rely on vendor SLA, cache last known state | Open |
+| **R3** | Technical | Payment gateway integration failure | Medium | High | Backend Lead | **Mitigate** — sandbox testing, fallback payment method | Open |
+| **R4** | Technical | QR pass spoofing / replay vulnerability | Low | High | QA Lead | **Mitigate** — signed, time-limited cryptographic tokens | Open |
+| **R5** | Technical | Database cannot scale under peak load | Medium | Medium | Backend Lead | **Mitigate** — comprehensive load testing before launch | Monitoring |
+| **R6** | Schedule | Backend delays block dependent mobile/web features | Medium | High | Project Manager | **Mitigate** — sequence sprints around backend milestones | Open |
+| **R7** | Schedule | Third-party integrations take longer than estimated | High | Medium | Project Manager | **Accept** — build buffer into activity estimates | Monitoring |
+| **R8** | Schedule | QA/UAT window compressed by upstream delays | Medium | High | QA Lead | **Mitigate** — start test case prep early, in parallel | Open |
+| **R9** | Schedule | Scope creep from stakeholder requests | Medium | Medium | Project Manager | **Avoid** — lock Release 1.0 scope, log extras to product backlog | Open |
+| **R10** | Financial | Hardware costs exceed project budget | Medium | Medium | Project Manager | **Mitigate** — secure vendor quotes early, establish hardware spending cap | Open |
+| **R11** | Financial | Payment processing fees higher than estimated | Low | Low | Project Manager | **Accept** — monitor actual processing ledger against estimates | Monitoring |
+| **R12** | Financial | Cloud hosting costs scale faster than planned | Medium | Medium | Backend Lead | **Mitigate** — set billing alerts and strict auto-scaling limits | Open |
+| **R13** | Financial | Municipal compliance/permitting delay or denial | Low | High | Project Manager | **Mitigate** — submit documentation and initiate permitting early | Open |
+| **R14** | People | Team member becomes unavailable or leaves | Medium | High | Project Manager | **Mitigate** — document architectural ownership, cross-train on key components | Open |
+| **R15** | People | Skill gaps in payment/backend integration | Medium | Medium | Project Manager | **Mitigate** — allocate dedicated spike time for research and POCs | Open |
+| **R16** | People | Miscommunication between driver-app and portal tracks | Low | Medium | Project Manager | **Mitigate** — maintain shared backlog, conduct cross-team syncs | Open |
+| **R17** | People | Single point of failure on critical system knowledge | Medium | High | Project Manager | **Mitigate** — enforce pair programming on core modules, require technical docs | Open |
+| **R18** | Technical | Third-party QR/encryption library deprecated | Low | Medium | Backend Lead | **Accept** — monitor open-source dependencies for deprecation notices | Monitoring |
+
+---
+
+### 8.3 Communication Plan
+
+To ensure transparent execution and rapid escalation of blockers, project updates are divided into regular cadences and segmented by audience:
+
+* **Daily Stand-Up:** 15-minute operational sync covering completed deliverables, immediate daily goals, and emerging technical blockers.
+* **Weekly Progress Meeting:** Formal sprint evaluation reviewing burn-down progress, open risk exposures, and schedule milestone health.
+* **Monthly Sprint Review:** High-level executive briefing and software demo against current Sprint Backlog deliverables for instructional and project stakeholders.
+
+#### Reporting Tailoring & Cadence
+
+| Audience | Channels | Deliverables & Artifacts | Focus & Level of Detail |
+| :--- | :--- | :--- | :--- |
+| **Stakeholders / Course Instruction** | GitHub Releases, Video Briefings | Video walkthroughs, Milestone status summaries, High-level risk exposure | Executive summary, schedule adherence, critical milestone delivery |
+| **Engineering Team** | GitHub Repository, Trello Board, Discord/Slack | Task-level tickets, pull requests, CI/CD pipeline logs, Architecture documentation | Implementation specifics, code reviews, schema migrations, blockers |
+
+The **Risk Register (Section 8.2)** is reviewed and re-baselined at each weekly progress meeting to ensure probabilities, impacts, and mitigation owners accurately reflect live development conditions.
+
+* THIS IS THE END OF MY HOMEWORK 4 *
