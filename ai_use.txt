@@ -7,3 +7,6 @@ easy to read and sectioned.
 
 
 1.) Gemini Pro was used again to help me troubleshoot issues with my Gantt chart in excel, and also to fix the formatting issues that I kept running into for the readme.md file , I asked gemini to "make my formatting consistent with the rest of my document" because I prefer to do my work in a word doc and then move it to the readME file.
+
+
+1.) I once again used gemini pro to fix my formatting issues as I had typed my work out on a doc and it wasnt properly transferring to my document in the way I wanted it to.
