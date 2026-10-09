@@ -10,3 +10,5 @@ easy to read and sectioned.
 
 
 1.) I once again used gemini pro to fix my formatting issues as I had typed my work out on a doc and it wasnt properly transferring to my document in the way I wanted it to.
+
+1.) I used Gemini to help walk me through making the excel sheet since I kept on running into technical difficulties, and then I also used it to format my text from my word doc so it would be easily readable in my README.MD file.
