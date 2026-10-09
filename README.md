@@ -614,3 +614,72 @@ To ensure transparent execution and rapid escalation of blockers, project update
 The **Risk Register (Section 8.2)** is reviewed and re-baselined at each weekly progress meeting to ensure probabilities, impacts, and mitigation owners accurately reflect live development conditions.
 
 * THIS IS THE END OF MY HOMEWORK 4 *
+
+## Document Control
+
+| Field | Details |
+| :--- | :--- |
+| **Document Version** | 5.0 |
+| **Date** | October 8, 2026 |
+| **Assignment** | Homework 5 — Resource Plan, Cost Plan & RACI Matrix |
+| **Change Summary** | Added Section 9: Resource Plan, Cost Plan, and RACI Matrix per Homework 5 requirements. |
+
+---
+
+## Section 9: Resource Plan, Cost Plan & RACI Matrix (Homework 5)
+
+To establish operational feasibility and financial governance, the project incorporates resource capacity allocations, a bottom-up cost budget, and a defined governance matrix. Work allocations reflect the phased nature of development, balancing early architectural spikes against late-stage quality assurance and release engineering.
+
+---
+
+### 9.1 Team Roles & Resource Allocations
+
+The development team is structured around four primary roles tailored for an agile, indie-scale engineering build:
+
+* **Project Manager (Morgan Reyes) — ~25% FTE:** Directs sprint planning, timeline baselining, dependency tracking, vendor coordination, and weekly stakeholder communication.
+* **Backend Lead (Priya Nair) — ~47% FTE:** Architects core microservices, relational database schemas, telemetry ingestion pipelines, rate-limiting rules, and payment gateway infrastructure.
+* **Mobile Lead (Jason Cole) — ~47% FTE:** Develops driver mobile application interfaces (iOS/Android), operator portal views, BLE beacon discovery flows, and real-time map integrations.
+* **QA Lead (Sam Okafor) — ~34% FTE:** Directs test automation frameworks, stress/load simulations, security audits, and UAT coordination, with hours weighted heavily toward the final sprints.
+
+---
+
+### 9.2 Cost Plan & Budgeting
+
+The budget was constructed using a **bottom-up estimation model**, combining direct labor (role-based hourly rates multiplied by budgeted hours) with non-labor capital expenditures and operational expenses:
+
+* **Direct Labor:** Engineering, architecture, quality assurance, and project governance.
+* **Cloud Infrastructure & Persistence:** Relational database instances, application compute, container registry, and auto-scaling capacity.
+* **Third-Party API Services:** Mapping/geocoding services, payment gateway sandbox fees, and SMS/MFA transactional delivery.
+* **Prototyping Hardware & Licensing:** Test magnetic sensors, microcontroller interface gateways, and production-grade developer tooling licenses.
+
+#### Financial Summary
+
+| Cost Category | Subtotal / Details |
+| :--- | :--- |
+| **Direct Labor & Operational Infrastructure** | $48,900 |
+| **Contingency Reserve (10% Buffer for Estimation Uncertainty)** | $4,890 |
+| **Total Project Budget (4-Month Delivery)** | **$53,790** |
+
+> **Financial Artifact Reference:** The detailed itemized breakdown and monthly cash-flow burn plan are available in the Smart_Parking_Resource_Cost_Plan.xlsx`.
+
+---
+
+### 9.3 Governance: RACI Matrix
+
+The RACI Matrix establishes clear operational boundaries and accountability lines across critical project deliverables:
+
+* **R (Responsible):** The role that completes the work package or task.
+* **A (Accountable):** The individual with final approval and decision-making authority (strictly one per task).
+* **C (Consulted):** Subject matter experts who provide critical two-way input and feedback.
+* **I (Informed):** Individuals kept up to date on milestones, progress, and outcomes.
+
+| Task / Lifecycle Deliverable | Project Manager | Backend Lead | Mobile Lead | QA Lead |
+| :--- | :---: | :---: | :---: | :---: |
+| **Requirements & Scope Definition** | **A** | C | C | I |
+| **Backend API & Database Schemas** | C | **R** | I | I |
+| **Client Applications (Driver & Operator UI)** | C | I | **R** | I |
+| **Payment Gateway Integration & Hardening** | C | **R** | C | I |
+| **Quality Assurance, Performance & UAT** | **A** | I | I | **R** |
+| **Cloud Deployment & Release 1.0** | **A** | **R** | **R** | C |
+
+*THIS IS THE END OF MY  HOMEWORK 5 *
