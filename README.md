@@ -683,3 +683,42 @@ The RACI Matrix establishes clear operational boundaries and accountability line
 | **Cloud Deployment & Release 1.0** | **A** | **R** | **R** | C |
 
 *THIS IS THE END OF MY  HOMEWORK 5 *
+
+
+
+| Field | Details |
+| :--- | :--- |
+| **Document Version** | 7.0 |
+| **Date** | October 29, 2026 |
+| **Assignment** | Homework 7 — Stakeholder Analysis & Management Plan |
+| **Change Summary** | Added Section 10: Stakeholder Analysis (Power-Interest Grid) per Homework 7 requirements. |
+
+---
+
+## Section 10: Stakeholder Analysis & Management Plan (Homework 7)
+
+To make sure everyone is on the same page and to keep the project moving forward without surprises, I mapped out our key stakeholders using a standard **Power-Interest Grid (Mendelow's Matrix)**. This groups people into four quadrants—*Manage Closely*, *Keep Satisfied*, *Keep Informed*, and *Monitor*—so we know exactly how much time, detail, and communication each group actually needs from us.
+
+---
+
+### 10.1 Power-Interest Grid
+
+The table below breaks down each stakeholder group, where they land on the grid, and how we plan to work with them:
+
+| Stakeholder Group | Power | Interest | Quadrant | Engagement Approach |
+| :--- | :---: | :---: | :---: | :--- |
+| **Garage Operators** | **High** | **High** | **Manage Closely** | They are the paying customer. If the web portal doesn't give them real value—like clear occupancy tracking, pricing controls, and useful reports—they can walk away, which kills the project. We're keeping in close contact during UI/backend work and getting direct feedback during UAT. |
+| **Development Team** *(PM, Backend, Mobile, QA Leads)* | **High** | **High** | **Manage Closely** | We have hands-on control over technical decisions, estimates, and what is realistically shippable by each deadline. We stay aligned through daily 15-minute stand-ups, weekly progress meetings, and sprint planning sessions. |
+| **Project Sponsor / Investors** | **High** | **Medium** | **Keep Satisfied** | They control the budget and could pull funding if costs or timelines get out of hand, but they don't need the day-to-day weeds. We keep them updated through monthly milestone check-ins tied to the Section 9 Cost Plan and CPI/SPI metrics. |
+| **Instructor / Evaluator** | **High** | **Low** | **Keep Satisfied** | Sets the grading criteria and evaluates the project, but engages mostly at graded checkpoints rather than daily execution. Weekly README updates and milestone walkthrough videos keep everything current and documented. |
+| **Drivers (End Users)** | **Low** | **High** | **Keep Informed** | Drivers don't have a direct say in our technical roadmap, but their adoption and daily experience are the real test of whether the app works. We keep them in the loop through clear release notes, in-app updates, and beta testing feedback during UAT. |
+| **Third-Party API Vendors** *(Stripe, Mapbox, Twilio)* | **Medium** | **Low** | **Monitor** | Any of these services could tweak their pricing, rate limits, or terms in ways that impact us, but our project is a tiny account to them. We manage them defensively through our Section 8 Risk Register (R2, R3, R18) rather than direct day-to-day outreach. |
+
+---
+
+### 10.2 How the Quadrants Work in Practice
+
+* **Manage Closely (High Power / High Interest):** Garage Operators and the Dev Team both land here, but for very different reasons. Operators have the business leverage—if the portal doesn't solve their problems, they won't use it. The Dev Team has technical leverage—we decide what's feasible to build within our timeline. Both groups need regular, transparent communication.
+* **Keep Satisfied (High Power / Medium-to-Low Interest):** Sponsors and course evaluators hold sign-off and grading authority. They care about overall progress, budget health, and milestone delivery, so we focus on concise executive summaries rather than bug-level technical discussions.
+* **Keep Informed (Low Power / High Interest):** Everyday drivers have no administrative authority over the system, but they will deal directly with navigation, slot locks, and payments. Their input during beta testing helps catch usability snags before release.
+* **Monitor (Medium Power / Low Interest):** API vendors supply crucial pieces like mapping and payments, but we treat them as operational dependencies. We keep an eye on their documentation, deprecation notices, and SLA uptimes without expecting a personal relationship.
