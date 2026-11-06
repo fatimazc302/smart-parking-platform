@@ -722,3 +722,65 @@ The table below breaks down each stakeholder group, where they land on the grid,
 * **Keep Satisfied (High Power / Medium-to-Low Interest):** Sponsors and course evaluators hold sign-off and grading authority. They care about overall progress, budget health, and milestone delivery, so we focus on concise executive summaries rather than bug-level technical discussions.
 * **Keep Informed (Low Power / High Interest):** Everyday drivers have no administrative authority over the system, but they will deal directly with navigation, slot locks, and payments. Their input during beta testing helps catch usability snags before release.
 * **Monitor (Medium Power / Low Interest):** API vendors supply crucial pieces like mapping and payments, but we treat them as operational dependencies. We keep an eye on their documentation, deprecation notices, and SLA uptimes without expecting a personal relationship.
+*THIS IS THE END OF HOMEWORK 7*
+## Document Control
+
+| Field | Details |
+| :--- | :--- |
+| **Document Version** | 7.0 |
+| **Date** | November 5, 2026 |
+| **Assignment** | Homework 8 — Project Closure Report & Lessons Learned |
+| **Change Summary** | Added Section 7: Interim Project Closure Report (marked INTERNAL) per Homework 7 requirements. |
+
+---
+
+## Section 7: Project Closure Report (Internal — Not for External Distribution)
+
+> **Interim Status Note:** Release 1.0 of the Smart Parking Platform is currently in active execution; Milestone M9 (Final Delivery / Release 1.0) is targeted for December 17, 2026. This section serves as an **interim closure report** evaluated against live project health and metrics as of November 5, 2026. A finalized release closure document will be archived under a subsequent Document Control version upon production shipment.
+
+---
+
+### 7.1 Executive Summary
+
+To date, four of the nine formal schedule milestones defined in Section 6.2 are fully closed:
+* **M1:** Requirements Sign-Off
+* **M2:** WBS & Schedule Baseline
+* **M3:** Core Backend & Identity Services
+* **M4:** Driver Mobile Application Alpha (Discovery, Map Search & Reservation Lock)
+
+Additionally, the Operator Web Portal dashboard and bay-management module closed on October 30, finishing ahead of the November 10 target for Milestone M5. Payment gateway integration reaches code complete this week, unblocking downstream PCI-DSS compliance audits and in-garage BLE navigation pipelines. 
+
+All primary project governance baselines—the Resource and Cost Plan, RACI Matrix, Stakeholder Power-Interest Grid, and Team Charters—remain stable with zero rework cycles required since baseline sign-off. The delivery timeline maintains zero slip against the original schedule baseline.
+
+---
+
+### 7.2 Achievements and Shortfalls
+
+#### Key Achievements
+* **Architecture-First Sequencing:** Core REST APIs, persistence schemas, and role-based access control (FR1) were delivered ahead of dependent client-side interfaces, validating the Finish-to-Start (FS) pipeline design.
+* **Functional Mobile Pipeline:** The driver mobile application has achieved end-to-end operational readiness across geospatial facility discovery (FR2), live occupancy overlays (FR3), 15-minute slot reservation locks (FR4), and cryptographically signed QR passes (FR6).
+* **Early Operational Milestone Delivery:** The operator dashboard and bay-override subsystem (wp1) reached sign-off on October 30—eleven days ahead of schedule.
+* **Planning Stability:** Core management and governance artifacts have absorbed sprint iterations without scope creep or structural adjustments.
+
+#### Identified Shortfalls & Vulnerabilities
+* **Zero-Slack Dependency Sequencing:** Payment processing integration (FR5) and PCI-DSS tokenization compliance (NFR4) are sequenced back-to-back with zero buffer days. Any gateway validation defect immediately impacts compliance audit start dates.
+* **Resource Concentration Risk:** Bluetooth in-facility navigation (mo4) and session extension/history (mo5) overlap on the mobile engineering track during QR pass finalization. While overall sizing estimates were accurate, the schedule did not isolate single-team concurrency bottlenecks.
+* **Sprint Metric Observability Gaps:** Project velocity tracking, automated burndown charts, and recurring agile retrospective cadences were not formalized during early sprints, leaving schedule milestone dates as the sole progress indicator.
+
+---
+
+### 7.3 Lessons Learned
+
+* **Dependency Decoupling Prevents Rework:** Enforcing hard Finish-to-Start dependencies between core backend schemas and front-end interface consumers eliminated rework and blocked merge collisions across both mobile and web tracks.
+* **Analogy-Based Estimation Requires Resource-Level Decomposition:** Sizing by historical analogy accurately predicted aggregate hours, but failed to highlight single-developer concentration risks where parallel work packages converge on one role.
+* **Progress Observability Requires Upfront Investment:** Upfront effort was invested in static control documents (charters, budgets, RACI), while runtime telemetry (velocity, burn-up/burndown) was deferred, reducing granular week-to-week visibility.
+
+---
+
+### 7.4 Recommendations for Future Projects & Next Steps
+
+1. **Agile Metric Instrumentation:** Deploy sprint burndown tracking and establish formal retrospectives (*Set the Stage, Gather Data, Generate Insights, Decide Actions, Close*) during Sprint 0 rather than mid-project.
+2. **Buffer Allocation for Single-Track Concurrency:** Introduce schedule buffers whenever resource allocation models indicate a single engineer is covering multiple overlapping critical-path features.
+3. **Standing Dependency Audits:** Transition third-party API dependencies (Stripe, Mapbox, Twilio) from static Risk Register rows into recurring, weekly operational status reviews.
+4. **Final Closure Re-issuance:** Re-baseline and publish the definitive project closure report at Release 1.0 (Milestone M9, December 17, 2026), directly benchmarking production outcomes against the metrics established in this interim evaluation.
+*THIS IS THE END OF HOMEWORK 8*
